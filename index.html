@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AromaCraft Roasters | Artisan Online Coffee Shop</title>
+  <meta name="description" content="Order freshly roasted artisan coffee, espresso brews, cold brews, and baked pastries delivered to your door or ready for cafe pickup." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <span>✨ <strong>Summer Roastery Special:</strong> Get 10% OFF on all cold brews & single origins!</span>
+      <span class="promo-tag">CODE: COFFEE10</span>
+      <button class="copy-code-btn" data-code="COFFEE10">Copy Code</button>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo">
+        <div class="brand-logo-icon">☕</div>
+        <span>Aroma<span class="text-gold">Craft</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#quiz" class="nav-link">Find Your Brew</a></li>
+          <li><a href="#menu" class="nav-link">Menu & Order</a></li>
+          <li><a href="#story" class="nav-link">Our Story</a></li>
+          <li><a href="#reservation" class="nav-link">Reserve Table</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="View Cart">
+          <span>🛒</span>
+          <span class="cart-label">Cart</span>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+
+        <a href="#menu" class="btn btn-primary btn-sm nav-order-btn">
+          Order Online
+        </a>
+
+        <button class="btn-icon mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle Navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="section-tag">🌿 100% Fair-Trade & Organic Beans</span>
+        <h1 class="hero-title">
+          Artisan Coffee, <br>
+          <span class="text-gold">Roasted with Soul</span> & Brewed to Perfection.
+        </h1>
+        <p class="hero-description">
+          Experience small-batch single-origin coffees, velvety handcrafted espresso drinks, and freshly baked viennoiserie pastries delivered hot to your doorstep or ready for pickup.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn btn-primary">
+            <span>Explore Menu & Order</span>
+            <span>→</span>
+          </a>
+          <a href="#quiz" class="btn btn-secondary">
+            <span>✨ Match My Flavor</span>
+          </a>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="stat-item">
+            <h4>4.9 ★</h4>
+            <p>10,000+ Reviews</p>
+          </div>
+          <div class="stat-item">
+            <h4>100%</h4>
+            <p>Direct Ethical Trade</p>
+          </div>
+          <div class="stat-item">
+            <h4>20 Mins</h4>
+            <p>Average Delivery Time</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-main-card">
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Artisan Pour Over Coffee" />
+          <div class="hero-card-overlay">
+            <div style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+              Featured Pour-Over
+            </div>
+            <h3 style="font-size: 1.4rem; color: var(--text-main); margin-top: 0.2rem;">
+              Single-Origin Ethiopian Honey Geisha
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">
+              Notes of wild jasmine, bergamot citrus & sweet peach nectar.
+            </p>
+          </div>
+        </div>
+
+        <div class="floating-badge floating-badge-1">
+          <div class="badge-icon-box">♨️</div>
+          <div>
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent-cream);">Fresh Roasted Daily</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">In-house micro roastery</div>
+          </div>
+        </div>
+
+        <div class="floating-badge floating-badge-2">
+          <div class="badge-icon-box">🌱</div>
+          <div>
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent-cream);">Zero Waste Cafe</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">100% compostable cups</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Coffee Matcher Quiz -->
+  <section class="quiz-section" id="quiz">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">✨ Interactive Matcher</span>
+        <h2 class="section-title">Find Your Signature Brew</h2>
+        <p class="section-subtitle">Not sure what to order? Answer 3 quick flavor questions to find your personalized coffee match.</p>
+      </div>
+
+      <div class="quiz-card-wrapper" id="quizContainer">
+        <!-- Dynamically rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu & Catalog Section -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">☕ Handcrafted Menu</span>
+        <h2 class="section-title">Explore Our Artisan Catalog</h2>
+        <p class="section-subtitle">From rich espresso classics to slow-steeped nitro brews and oven-fresh pastries.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="menu-controls">
+        <div class="categories-bar" id="categoriesBar">
+          <!-- Rendered via JS -->
+        </div>
+
+        <div class="search-sort-bar">
+          <div class="search-box">
+            <span style="font-size: 1.1rem; color: var(--accent-gold);">🔍</span>
+            <input type="text" id="searchInput" placeholder="Search coffee, roasts, ingredients, pastries..." />
+          </div>
+
+          <div class="sort-box">
+            <label for="sortSelect">Sort By:</label>
+            <select id="sortSelect" class="sort-select">
+              <option value="featured">Featured / Best Matches</option>
+              <option value="rating">Highest Rated ★</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story & Roasting Process -->
+  <section class="reservation-section" id="story">
+    <div class="container reservation-grid">
+      <div>
+        <span class="section-tag">🌿 The Craft & Heritage</span>
+        <h2 class="section-title" style="font-size: 2.3rem;">From High Altitude Farms To Your Morning Cup</h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+          Founded with a relentless commitment to quality and ethical sourcing, AromaCraft partners directly with generational family coffee farms across Colombia, Ethiopia, Sumatra, and Guatemala.
+        </p>
+
+        <div class="story-features-grid">
+          <div class="story-feature-item">
+            <h4>🌱 Direct Fair Trade</h4>
+            <p>We pay 40% above fair-trade market rates directly to farming cooperatives.</p>
+          </div>
+          <div class="story-feature-item">
+            <h4>🔥 Precision Roasting</h4>
+            <p>Every single batch is custom-profiled on state-of-the-art cast iron drum roasters.</p>
+          </div>
+          <div class="story-feature-item">
+            <h4>🥛 Artisan Dairy & Mylks</h4>
+            <p>Locally sourced pasture milk and premium barista-grade oat and almond blends.</p>
+          </div>
+          <div class="story-feature-item">
+            <h4>♻️ Eco-Conscious</h4>
+            <p>100% plant-based compostable takeaway packaging & carbon neutral delivery.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table Reservation Form -->
+      <div class="reservation-form-box" id="reservation">
+        <h3 class="brand-font" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Reserve a Cozy Table</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem;">
+          Planning a coffee date, remote work session, or group tasting? Book your favorite spot in advance.
+        </p>
+
+        <form id="reservationForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="resName" class="form-control" placeholder="e.g. Sarah Jenkins" required />
+            </div>
+            <div class="form-group">
+              <label>Phone *</label>
+              <input type="tel" id="resPhone" class="form-control" placeholder="e.g. (555) 019-2834" required />
+            </div>
+            <div class="form-group">
+              <label>Number of Guests *</label>
+              <select id="resGuests" class="form-control">
+                <option value="1">1 Person (Solo Workspace)</option>
+                <option value="2" selected>2 People (Cozy Table)</option>
+                <option value="4">3 - 4 People (Lounge Booth)</option>
+                <option value="6">5 - 8 People (Tasting Table)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Seating Area</label>
+              <select id="resArea" class="form-control">
+                <option value="Indoor Main Room">Indoor Cafe Bar</option>
+                <option value="Garden Patio">Sunlit Garden Patio</option>
+                <option value="Quiet Study Lounge">Quiet Study Lounge</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Date *</label>
+              <input type="date" id="resDate" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label>Time Slot *</label>
+              <input type="time" id="resTime" class="form-control" value="10:00" required />
+            </div>
+            <div class="form-group full-width">
+              <label>Special Requests (Optional)</label>
+              <input type="text" id="resNotes" class="form-control" placeholder="e.g. Near power outlet, birthday coffee" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+            Book Table Reservation
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials & Reviews -->
+  <section class="testimonials-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">⭐ Coffee Community</span>
+        <h2 class="section-title">Loved by Thousands of Coffee Enthusiasts</h2>
+        <p class="section-subtitle">Real experiences from daily regulars, remote creators, and bean aficionados.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="review-author-row">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Sophia S." class="author-avatar" />
+            <div class="author-info">
+              <h4>Sophia Sterling</h4>
+              <p>Coffee Connoisseur & Designer</p>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "The Caramel Macchiato Royale and Vanilla Oat Flat White are unmatched in quality. The aroma greets you before you even take the first sip. 10/10 service!"
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="review-author-row">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Marcus V." class="author-avatar" />
+            <div class="author-info">
+              <h4>Marcus Vance</h4>
+              <p>Software Architect</p>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "Their Nitro Cold Brew powers my coding sprints every morning. Ordering online is seamless, and delivery was at my doorstep in 20 minutes hot & fresh!"
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="review-author-row">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Elena R." class="author-avatar" />
+            <div class="author-info">
+              <h4>Elena Rostova</h4>
+              <p>Food & Lifestyle Blogger</p>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "AromaCraft has the best single-origin Ethiopian beans I have ever ground at home. Love their sustainability promise and ethical direct trade."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="brand-logo-icon">☕</div>
+            <span>Aroma<span class="text-gold">Craft</span></span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            Dedicated to the art of master roasting and precision brewing. Visit our flagship cafe or order fresh coffee right to your doorstep.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--accent-latte);">
+            📍 742 Evergreen Blvd, Roastery District<br>
+            📞 (555) 438-2739 &nbsp;|&nbsp; ✉️ hello@aromacraftcoffee.com
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#quiz">Coffee Quiz Matcher</a></li>
+            <li><a href="#menu">Handcrafted Menu</a></li>
+            <li><a href="#story">Ethical Sourcing</a></li>
+            <li><a href="#reservation">Table Reservations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cafe Hours</h4>
+          <div style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.8;">
+            <p><strong style="color: var(--accent-cream);">Mon - Fri:</strong> 6:30 AM – 8:00 PM</p>
+            <p><strong style="color: var(--accent-cream);">Saturday:</strong> 7:00 AM – 9:00 PM</p>
+            <p><strong style="color: var(--accent-cream);">Sunday:</strong> 7:30 AM – 7:00 PM</p>
+            <p style="color: var(--color-success); font-weight: 600; margin-top: 0.5rem;">● Currently Open & Brewing</p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Join the Brew Club</h4>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">
+            Subscribe to receive secret roast drops, barista brewing guides, and a 15% welcome voucher.
+          </p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address..." required />
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AromaCraft Coffee Roasters. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: var(--text-muted);">Privacy Policy</a>
+          <a href="#" style="color: var(--text-muted);">Terms of Service</a>
+          <a href="#" style="color: var(--text-muted);">Nutritional Info</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS & SLIDE-OUT PANELS
+       ========================================================================= -->
+
+  <!-- Drink Customizer Modal -->
+  <div class="modal-backdrop" id="customizerBackdrop">
+    <div class="customizer-modal" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <h3 class="brand-font" style="font-size: 1.35rem;">Customize Your Drink</h3>
+        <button class="modal-close-btn" id="customizerClose" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body" id="customizerBody">
+        <!-- Rendered via JS -->
+      </div>
+
+      <div class="modal-footer">
+        <div class="live-price-box">
+          <span class="live-price-label">Customized Price:</span>
+          <span class="live-price-amount" id="customizerPrice">$0.00</span>
+        </div>
+        <button class="btn btn-primary" id="addToCartCustomBtn">
+          + Add Customized Drink
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide-out Shopping Cart Drawer -->
+  <div class="cart-drawer-backdrop" id="cartDrawerBackdrop">
+    <aside class="cart-drawer" role="dialog" aria-label="Shopping Cart">
+      <div class="cart-header">
+        <h3 class="brand-font" style="font-size: 1.35rem;">Your Coffee Order</h3>
+        <button class="modal-close-btn" id="cartDrawerClose" aria-label="Close cart">&times;</button>
+      </div>
+
+      <div class="cart-items-container" id="cartItemsContainer">
+        <!-- Rendered via JS -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="coupon-row">
+          <input type="text" id="couponInput" placeholder="Enter coupon (e.g. COFFEE10)" />
+          <button class="btn btn-secondary btn-sm" id="applyCouponBtn">Apply</button>
+        </div>
+
+        <div class="bill-breakdown">
+          <div class="bill-row">
+            <span>Subtotal</span>
+            <span id="cartSubtotal">$0.00</span>
+          </div>
+          <div class="bill-row" id="cartDiscountRow" style="display: none; color: var(--color-success);">
+            <span>Promo Discount</span>
+            <span id="cartDiscount">-$0.00</span>
+          </div>
+          <div class="bill-row">
+            <span>Delivery Fee</span>
+            <span id="cartShipping">$2.99</span>
+          </div>
+          <div class="bill-row">
+            <span>Estimated Tax (8%)</span>
+            <span id="cartTax">$0.00</span>
+          </div>
+          <div class="bill-row total-row">
+            <span>Total</span>
+            <span id="cartTotal" class="text-gold">$0.00</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="checkoutBtn" style="width: 100%; padding: 0.95rem;">
+          Proceed to Checkout →
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Multi-Step Checkout Modal -->
+  <div class="modal-backdrop" id="checkoutBackdrop">
+    <div class="customizer-modal checkout-modal" role="dialog" aria-modal="true">
+      <!-- Checkout Form dynamically initialized in JS -->
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Set default date for table reservation to tomorrow
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const dateInput = document.getElementById('resDate');
+    if (dateInput) {
+      dateInput.value = tomorrow.toISOString().split('T')[0];
+      dateInput.min = new Date().toISOString().split('T')[0];
+    }
+  </script>
+</body>
+</html>
